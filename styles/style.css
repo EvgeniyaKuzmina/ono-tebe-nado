@@ -102,6 +102,8 @@ address {
 .cover__title {
     z-index: 2;
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /*тут начались сложности*/
+    grid-template-rows: repeat(3, 1fr);
     color: #FFF;
     font-size: 100px;
     font-style: normal;
@@ -118,17 +120,21 @@ address {
 
 .aligned-text {
     line-height: 115%;
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 .aligned-text_center {
-    text-align: center;
     line-height: 100%;
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
 
 .aligned-text_right {
-    text-align: right;
     line-height: 100%;
     letter-spacing: 15px;
+    grid-column: -2/-1;
+    grid-row: -2/-1;
 }
 
 .cover__description {
